@@ -13,20 +13,29 @@ import java.util.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class 배열에서위치찾기 {
+class 검색알고리즘 {
     @Test
-    fun 순차찾기() {
-        val a = arrayOf(1, 2, 3, 4)
-        assert(linearSearch(a, 4) == 3)
-        assert(linearSearch(a, 3) == 2)
-        assert(linearSearch(a, 2) == 1)
-        assert(linearSearch(a, 1) == 0)
+    fun solution() {
+        val a = arrayOf(89, 57, 91, 47, 95, 3, 27, 22, 67, 99)
+        assert(linearSearch(a, 67) == 8)
+        assert(linearSearch(a, 11) == -1)
     }
 
+    // 선형검색
     private fun linearSearch(arr: Array<Int>, elementToSearch: Int): Int {
         arr.forEachIndexed { index, element ->
             if (element == elementToSearch) return index
         }
         return -1
     }
+
+    // 이진검색
+    private fun binarySearch(arr: Array<Int>, elementToSearch: Int): Int {
+        arr.forEachIndexed { index, element ->
+            if (element == elementToSearch) return index
+        }
+        return -1
+    }
 }
+
+// https://stackabuse.com/search-algorithms-in-java/
