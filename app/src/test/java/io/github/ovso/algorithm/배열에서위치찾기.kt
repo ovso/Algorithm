@@ -1,4 +1,4 @@
-@file:Suppress("NonAsciiCharacters", "ClassName")
+@file:Suppress("NonAsciiCharacters", "ClassName", "TestFunctionName")
 
 package io.github.ovso.algorithm
 
@@ -15,10 +15,18 @@ import java.util.*
  */
 class 배열에서위치찾기 {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-        val a = arrayOf(1,2,3,4)
-        println(a.indexOf(4))
-        println(Arrays.binarySearch(a, 4))
+    fun 순차찾기() {
+        val a = arrayOf(1, 2, 3, 4)
+        assert(linearSearch(a, 4) == 3)
+        assert(linearSearch(a, 3) == 2)
+        assert(linearSearch(a, 2) == 1)
+        assert(linearSearch(a, 1) == 0)
+    }
+
+    private fun linearSearch(arr: Array<Int>, elementToSearch: Int): Int {
+        arr.forEachIndexed { index, element ->
+            if (element == elementToSearch) return index
+        }
+        return -1
     }
 }
