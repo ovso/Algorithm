@@ -2,11 +2,7 @@
 
 package io.github.ovso.algorithm
 
-import io.reactivex.rxjava3.core.Observable
 import org.junit.Test
-
-import org.junit.Assert.*
-import java.util.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
