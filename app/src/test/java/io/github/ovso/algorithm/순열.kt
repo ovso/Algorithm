@@ -64,6 +64,7 @@ class 순열 {
                 val tmp = chars[depth]
                 chars[depth] = chars[i]
                 chars[i] = tmp
+
                 permutation(chars, depth + 1, r)
 
                 // 스왑한거 다시 되돌리기
