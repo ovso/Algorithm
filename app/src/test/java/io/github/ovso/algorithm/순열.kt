@@ -13,10 +13,11 @@ class 순열 {
     @Test
     fun 순열을포함하는지여부() {
         val (s1, s2) = Pair("ab", "eidbaooo")
-        println(solution(s1, s2))
-    }
 
-    private fun solution(s1: String, s2: String): Boolean {
-        return s2.contains(s1) || s2.contains(s1.reversed())
+        fun solution(s1: String, s2: String): Boolean {
+            return s2.contains(s1) || s2.contains(s1.reversed())
+        }
+
+        println(solution(s1, s2))
     }
 }
