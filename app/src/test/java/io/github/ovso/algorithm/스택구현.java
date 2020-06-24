@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.EmptyStackException;
 
+@SuppressWarnings("NonAsciiCharacters")
 public class 스택구현 {
 
   @Test
@@ -13,6 +14,7 @@ public class 스택구현 {
     s.push(2);
     s.push(3);
     s.push(4);
+//    System.out.println(s.peek());
     System.out.println(s.pop());
     System.out.println(s.pop());
     System.out.println(s.peek());
@@ -22,8 +24,8 @@ public class 스택구현 {
     System.out.println(s.isEmpty());
   }
 
-  class Stack<T> {
-    class Node<T> {
+  static class Stack<T> {
+    static class Node<T> {
       private T data;
       private Node<T> next;
 
@@ -45,7 +47,7 @@ public class 스택구현 {
     }
 
     public void push(T item) {
-      Node<T> t = new Node(item);
+      final Node<T> t = new Node<>(item);
       t.next = top;
       top = t;
     }
