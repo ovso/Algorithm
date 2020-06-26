@@ -9,24 +9,9 @@ import org.junit.Test
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class 팰린드롬 {
+class Palindrome {
     @Test
     fun main() {
-/*
-        fun solution(s: String): Int {
-            for (index in s.count() - 1 downTo 0) {
-//                println(s[index])
-                println(s.substring(0, index + 1))
-                val substring = s.substring(0, index + 1)
-                if (substring == substring.reversed()) {
-                    return substring.count()
-                }
-            }
-
-            return 0
-        }
-*/
-
 //        println(solution("abcdcba"))
         val solution = solution("abcdcba")
         println("solution = $solution")

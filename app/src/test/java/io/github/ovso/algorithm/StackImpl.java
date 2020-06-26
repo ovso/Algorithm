@@ -4,8 +4,7 @@ import org.junit.Test;
 
 import java.util.EmptyStackException;
 
-@SuppressWarnings("NonAsciiCharacters")
-public class 스택구현 {
+public class StackImpl {
 
   @Test
   public void solution() {
@@ -14,7 +13,7 @@ public class 스택구현 {
     s.push(2);
     s.push(3);
     s.push(4);
-//    System.out.println(s.peek());
+    //    System.out.println(s.peek());
     System.out.println(s.pop());
     System.out.println(s.pop());
     System.out.println(s.peek());
